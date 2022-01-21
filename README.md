@@ -7,6 +7,10 @@ I'm using [Netlify](https://www.netlify.com/) to build and host my code because 
 
 **If you prefer TypeScript you can use [this template](https://github.com/armandsalle/vite-typescript-webflow)**
 
+## Live demo
+
+You can find a simple example of a Webflow site using this setup [here](https://vite-javascript.webflow.io/). The code is hosted on Netlify [here](https://vite-javascript-webflow.netlify.app/main.js). If you want to see the Webflow preview, it's [here](https://preview.webflow.com/preview/vite-javascript?utm_medium=preview_link&utm_source=designer&utm_content=vite-javascript&preview=65fac120c82ee6a81780f5a5cd5ecc59&workflow=preview) 👍
+
 ## How to use with Webflow
 
 ⚠️ if you are using Brave as a web browser or an ad blocker, you will need to disable it on your pre-production Webflow live site. Else it can block the fetching of the js files.

@@ -26,7 +26,7 @@ But if you only code and don't have access to the project, you can use this code
 
 ```html
 <script>
-  ;(function () {
+  (function () {
     const LOCALHOST_URL = [
       'http://localhost:3000/@vite/client',
       'http://localhost:3000/src/main.js',

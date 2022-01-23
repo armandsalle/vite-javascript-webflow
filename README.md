@@ -21,7 +21,7 @@ You can find a simple example of a Webflow site using this setup [here](https://
 The doc is [here](https://github.com/armandsalle/vite-javascript-webflow/blob/main/HowToUse_JS_FR.md) 
 
 ### 🇬🇧 English
-WIP
+The doc is [here](https://github.com/armandsalle/vite-javascript-webflow/blob/main/HowToUse_JS_EN.md) 
 
 <br />
 

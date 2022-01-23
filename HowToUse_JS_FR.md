@@ -12,10 +12,13 @@
 
 📌 Ce tuto nécessite d'avoir les bases avec Git, GitHub et NodeJs.
 
-⚠️ Avant tout, il faut que vous ayez git, NodeJS et Yarn d'installé sur votre machine. Il vous faudra aussi un IDE comme VSCode pour coder. Si tout ce que je viens de citer est inconnu pour vous, je vous conseil de regarder des vidéos d'introductions sur le JS et son écosystème avant. Un compte GitHub et Netlify sera nécessaire.
+⚠️ Avant tout, il faut que vous ayez Git, NodeJS et Yarn d'installé sur votre machine. Il vous faudra aussi un IDE comme VSCode pour coder. Si tout ce que je viens de citer est inconnu pour vous, je vous conseil de regarder des vidéos d'introductions sur le JS et son écosystème avant. Un compte GitHub et Netlify sera nécessaire.
 
 ⚡ Si vous utilisez un Ad Blocker ou Brave comme navigateur, vous devrez le désactiver sur votre site Webflow en live (pas dans le designer), pour qu'on puisse injecter notre code qui est sur notre machine.
 Pour Brave, désactiver le Brave Shield sur la page en cliquant sur la petite tête de lion à droite de l'URL.
+
+**Pour l'instant, ce setup ne fonctionne pas avec Safari !**
+
 
 
 ## Étape 1 : Installation et initialisation 💽
@@ -58,27 +61,28 @@ jQuery est déjà installé dans le projet, mais ne sera pas ajouté au code fin
 
 Pour lancer le serveur de dev du projet, ouvrez un terminal à la racine du projet et lancez la commande `yarn dev`
 
-Vous pouvez accéder à vos fichiers JS généré par Vite à l'adresse `localhost:3000/main.js` 
+Vous pouvez voir vos fichiers JS générés par Vite à l'adresse `http://localhost:3000/src/main.js` 
 
 ## Étape 3 : Intégration avec Webflow 📝
 
 C'est maintenant que les choses vont commencer à être excitante ! 
 
-Dans Webflow :
+Dans Webflow, deux possibilités:
 
-- Si vous faites le dev Webflow et le JS :
+Dans les deux cas, vous avez le HMR (Hot Module Reload) en place, ça permet de rafraichir la page à chaque fois que vous sauvegarder un fichier JS. C'est pratique et ça vous fera gagner du temps.
+
+- Si vous faites le dev Webflow et le JS:
     
-    Coller ce script dans la partie `Before </body> tag` du custom code de Webflow en faisant matcher le nom de vos pages avec le nom des fichier JS de votre projet (le fichier `about.js` pour la page About etc) 
+    Coller ce script dans la partie `Before </body> tag` du custom code de Webflow dans les paramètres du projet pour que ça soit chargé sur toutes les pages.
     
     ```html
-    <script src="http://localhost:3000/main.js"></script>
+    <script src="http://localhost:3000/@vite/client"></script>
+    <script src="http://localhost:3000/src/main.js"></script>
     ```
     
-    Vous avez maintenant le HMR (Hot Module Reload) en place, ça permet de rafraichir la page à chaque fois que vous sauvegarder un fichier TS. C'est pratique et ça vous fera gagner du temps.
+- Si vous faites le dev JS mais pas le dev Webflow (**version recommandée**)  :
     
-- Si vous faites le dev JS mais pas le dev Webflow :
-    
-    Coller ce script dans la partie `Before </body> tag` du custom code de Webflow dans les paramètres du projet. On changera l’url de Netlify un peu plus tard pour charger le fichiers de production.
+    Coller ce script dans la partie `Before </body> tag` du custom code de Webflow dans les paramètres du projet pour que ça soit chargé sur toutes les pages. On changera l’url de Netlify un peu plus tard pour charger le fichiers de production.
     
     ```jsx
     <script>

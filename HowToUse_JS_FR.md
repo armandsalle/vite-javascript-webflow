@@ -152,7 +152,7 @@ Dans les deux cas, vous avez le HMR (Hot Module Reload) en place, ça permet de 
     
     **1.**
     
-    C'est bon votre code est prêt, toutes les pages qui ont besoin de code ont leur propre fichiers JS. C'est l'heure de push !
+    C'est bon votre code est prêt. C'est l'heure de push !
     
     Pour cette étape il faudra **commit** puis **push** votre code sur **GitHub**.
     

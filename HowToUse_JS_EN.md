@@ -73,8 +73,8 @@ In both cases, you have the HMR (Hot Module Reload) in place, it allows you to r
   Paste this script into the `Before </body> tag` part of the Webflow custom code in the project settings so that it loads on all pages.
 
   ```html
-  <script src="http://localhost:3000/@vite/client"></script>
-  <script src="http://localhost:3000/src/main.js"></script>
+  <script type="module" src="http://localhost:3000/@vite/client"></script>
+  <script type="module" src="http://localhost:3000/src/main.js"></script>
   ```
 
 - If you are doing the JS dev but not the Webflow dev (**recommended version**):
